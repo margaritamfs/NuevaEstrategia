@@ -11,13 +11,15 @@ import androidx.recyclerview.widget.RecyclerView
 import org.w3c.dom.Text
 
 class MyTaskListAdapter (context : AppCompatActivity, val info : Bundle)
-    : RecyclerView.Adapter<MyTaskListAdapter.MyViewHolder>()
-{
-        class MyViewHolder(val layout : View) : RecyclerView.ViewHolder(layout)
+    : RecyclerView.Adapter<MyTaskListAdapter.MyViewHolder>()  {
+
+    class MyViewHolder(val layout : View) : RecyclerView.ViewHolder(layout)
+
     private var context : AppCompatActivity = context
+
     var myTaskTitles : ArrayList<String> = info.getStringArrayList("titles") as ArrayList<String>
-    var myTasktimes : ArrayList<String> = info.getStringArrayList("titles") as ArrayList<String>
-    var myTaskPlaces : ArrayList<String> = info.getStringArrayList("titles") as ArrayList<String>
+    var myTasktimes : ArrayList<String> = info.getStringArrayList("times") as ArrayList<String>
+    var myTaskPlaces : ArrayList<String> = info.getStringArrayList("places") as ArrayList<String>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layout = LayoutInflater.from(parent.context).inflate(R.layout.task_list_items,parent,false)
@@ -26,8 +28,9 @@ class MyTaskListAdapter (context : AppCompatActivity, val info : Bundle)
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         var textViewTask = holder.layout.findViewById<TextView>(R.id.textViewTask)
-        var txtViewTime = holder.layout.findViewById<TextView>(R.id.textViewTime)
         textViewTask.text=myTaskTitles[position]
+
+        var txtViewTime = holder.layout.findViewById<TextView>(R.id.textViewTime)
         txtViewTime.text=myTasktimes[position]
 
         holder.layout.setOnClickListener{

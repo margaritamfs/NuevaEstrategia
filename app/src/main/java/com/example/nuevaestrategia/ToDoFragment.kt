@@ -45,11 +45,25 @@ class ToDoFragment : Fragment() {
             startActivityForResult(intent,recursiveScope)
         }
 
+        var info : Bundle =   Bundle()
+        info.putStringArrayList("titles",myTaskTitles)
+        info.putStringArrayList("times",myTaskTimes)
+        info.putStringArrayList("places",myTaskPlaces)
+
+        listRecyclerView = requireView().findViewById(R.id.recyclerToDoList)
+        myAdapter = MyTaskListAdapter(activity as AppCompatActivity,info)
+
+        listRecyclerView.setHasFixedSize(true)
+        listRecyclerView.adapter = myAdapter
+        listRecyclerView.addItemDecoration(DividerItemDecoration(context,DividerItemDecoration.VERTICAL))
+
+        updateList()
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(requestCode==0){
-            if (requestCode==Activity.RESULT_OK){
+            if (resultCode==Activity.RESULT_OK){
                 updateList()
             }
 
@@ -63,14 +77,14 @@ class ToDoFragment : Fragment() {
         runBlocking {
             launch {
                 var result = toDoDAD.getAllTask()
-                var i=1
+                var i=0
                 myTaskTitles.clear()
                 myTaskTimes.clear()
                 myTaskPlaces.clear()
                 while (i< result.size){
-                    myTaskTitles.add(result[i].title.toString())
-                    myTaskTimes.add(result[i].time.toString())
-                    myTaskPlaces.add(result[i].place.toString())
+                    myTaskTitles.add(result[i].title)
+                    myTaskTimes.add(result[i].time)
+                    myTaskPlaces.add(result[i].place)
                     i++
                 }
                 myAdapter.notifyDataSetChanged()

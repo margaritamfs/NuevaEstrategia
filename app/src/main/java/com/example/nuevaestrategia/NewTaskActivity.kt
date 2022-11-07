@@ -25,16 +25,19 @@ class NewTaskActivity : AppCompatActivity() {
     }
 
     fun onSaveTask(view: View) {
+
+        var db = ToDoDataBase.getDatabase(this)
+        val todoDAO= db.todoDao()
+
         var title: String = editTextTitle.text.toString()
         var time: String = editTextTime.text.toString()
         var place: String = editTextPlace.text.toString()
-        var db = ToDoDataBase.getDatabase(this)
-        val todoDAO= db.todoDao()
         val task = ToDo(0,title,time,place)
+
         runBlocking {
             launch {
                 var result = todoDAO.insertTask(task)
-                if(result!=1L){
+                if(result!=-1L){
                     setResult(Activity.RESULT_OK)
                     finish()
                 }
