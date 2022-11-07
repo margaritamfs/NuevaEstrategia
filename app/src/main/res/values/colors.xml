@@ -15,5 +15,9 @@
     <color name="text_error">#e6332a</color>
     <color name="text_seleccionado">#fcc024</color>
 
+    <color name="text_color23">#22D635</color>
+    <color name="text_color24">#E91E63</color>
+    <color name="text_color25">#009688</color>
+
 
 </resources>

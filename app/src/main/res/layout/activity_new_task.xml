@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewTaskActivity"
+    android:background="@color/text_error">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="title"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="time"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="place"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSaveTask"
+        android:text="Save"/>
+
+</LinearLayout>
