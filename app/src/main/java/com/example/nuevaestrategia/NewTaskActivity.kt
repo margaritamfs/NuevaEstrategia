@@ -8,6 +8,7 @@ import android.widget.EditText
 import androidx.room.RoomDatabase
 import com.example.nuevaestrategia.room_database.ToDo
 import com.example.nuevaestrategia.room_database.ToDoDataBase
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -27,17 +28,24 @@ class NewTaskActivity : AppCompatActivity() {
     fun onSaveTask(view: View) {
 
         var db = ToDoDataBase.getDatabase(this)
+        val dbFirebase = FirebaseFirestore.getInstance()
+
         val todoDAO= db.todoDao()
 
         var title: String = editTextTitle.text.toString()
         var time: String = editTextTime.text.toString()
         var place: String = editTextPlace.text.toString()
+
         val task = ToDo(0,title,time,place)
 
         runBlocking {
             launch {
                 var result = todoDAO.insertTask(task)
                 if(result!=-1L){
+                    dbFirebase.collection("ToDo").document(result.toString()).set(
+                        hashMapOf("title" to title,"time" to time,"place" to place)
+                    )
+
                     setResult(Activity.RESULT_OK)
                     finish()
                 }

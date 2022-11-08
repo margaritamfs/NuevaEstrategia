@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
+    android:id="@+id/authLayout"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -38,7 +39,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="30dp"
+        android:paddingTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:gravity="center_vertical"
@@ -53,6 +54,7 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/stra_usuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -60,8 +62,7 @@
             android:background="@color/white"
             android:hint="@string/usuariomail"
             android:textColor="@color/btn_gral"
-            android:id="@+id/stra_usuario"
-            android:padding="7dp"
+            android:padding="1dp"
             android:textSize="16sp" />
 
         <TextView
@@ -70,7 +71,7 @@
             android:text="@string/text_password"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:paddingTop="20dp"/>
+            android:paddingTop="10dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -84,34 +85,65 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtLogin"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="50dp"
                 android:hint="@string/ingreso_password"
                 android:inputType="textPassword"
                 android:textSize="15sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
         <Button
             android:id="@+id/btnLogin"
             android:onClick="onLogin"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
             android:text="@string/txt_botoningreso"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="10dp"
             android:background="@drawable/boton_redondo"/>
 
         <Button
             android:id="@+id/btnRegistre"
             android:onClick="onRegister"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
             android:text="@string/txt_botonregistro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/boton_redondo"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnemail"
+            android:onClick="onRegisteremail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_botonregistroemail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/boton_redondo"/>
+
+        <Button
+            android:id="@+id/btnloginemail"
+            android:onClick="onLoginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_loginemail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/boton_redondo"/>
+
 
 
     </LinearLayout>

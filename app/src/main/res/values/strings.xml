@@ -51,5 +51,11 @@
     <string name="hora">Hora: </string>
     <string name="descripciontarea">Tarea:</string>
     <string name="txt_nombredesarrollador">Margarita Forero La Mejor</string>
+    <string name="txt_botonregistroemail">Registro con email</string>
+    <string name="bienvenidousuario">WELCOME</string>
+    <string name="txt_loginemail">Login email</string>
+    <string name="cerrarsesion">Close Session</string>
+
+    <string name="prefs_file">com.example.nuevaestrategia.PREFERENCE_FILE_KEY</string>
 
 </resources>

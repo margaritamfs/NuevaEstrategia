@@ -34,11 +34,22 @@
 
 
         <TextView
+            android:id="@+id/textprovedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:autoSizeTextType="uniform"
             android:justificationMode="inter_word"
-            android:text="@string/trabajo1Detail"
+            android:text="@string/bienvenidousuario"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:justificationMode="inter_word"
+            android:text="@string/nombreusuario"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -49,7 +60,15 @@
             android:textColor="@color/teal_700"
             android:textSize="20sp"
             android:paddingTop="20dp"
+            android:layout_marginBottom="25dp"
             android:justificationMode="inter_word"/>
+        
+        <Button
+            android:id="@+id/buttonCerrar"
+            android:onClick="onlogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cerrarsesion"/>
 
 
     </LinearLayout>

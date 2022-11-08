@@ -11,10 +11,17 @@ import androidx.room.Update
 interface ToDoDaD {
     @Query("SELECT * FROM ToDo")
     suspend fun getAllTask():List<ToDo>
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertTask(tas : ToDo) : Long
+
     @Update
     suspend fun updateTask(task : ToDo)
+
     @Delete
     suspend fun deleteTask(Task : ToDo)
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertTasks(task: List<ToDo>?) : List<Long>
+
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "842250922449",
+    "project_id": "miporyectico",
+    "storage_bucket": "miporyectico.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842250922449:android:d261fe8d67bfca68d618f0",
+        "android_client_info": {
+          "package_name": "com.example.nuevaestrategia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842250922449-h5d3hi2t9cgboresl4ffu1jsml1t1g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo8ZSoYL8ZtCx0RpaCdxLG7cbGTEL2k6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842250922449-h5d3hi2t9cgboresl4ffu1jsml1t1g94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
