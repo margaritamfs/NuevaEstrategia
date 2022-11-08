@@ -1,5 +1,6 @@
 package com.example.nuevaestrategia
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class Welcome : AppCompatActivity() {
     private var textemail: TextView?=null
     private var textprovedor: TextView?=null
     private var btnLogOut: Button?=null
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)

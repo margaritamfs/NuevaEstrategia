@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -124,16 +125,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showHome(email : String,provider : ProviderType){
+        Log.e("MainActivity","showHome")
         val homeIntent= Intent(this, Welcome::class.java)
             .apply {
                 putExtra("email", email)
                 putExtra("provider",provider.name)
             }
+        Log.e("MainActivity","homeIntent")
         startActivity(homeIntent)
     }
 
     fun onLoginEmail(view: View) {
-        title="Atentificacion"
+        title="Autenticacion"
         if(stra_usuario!!.text.isNotEmpty() && txtLogin!!.text.isNotEmpty()){
             FirebaseAuth.getInstance().signInWithEmailAndPassword(
                 stra_usuario!!.text.toString(),
@@ -178,6 +181,7 @@ class MainActivity : AppCompatActivity() {
     fun loginGoogle(){
         btnGoogle!!.setOnClickListener{
             //Toast.makeText(this,"btngoogle",Toast.LENGTH_LONG).show()
+            Log.e("MainActivity","loginGoogle")
             val googleleconf : GoogleSignInOptions=GoogleSignInOptions
                 .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -191,24 +195,32 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(resultCode==GOOGLE_SING_IN){
+        Log.e("MainActivity","onActivityResult")
+        Log.e("MainActivity", "requestCode..$requestCode")
+        Log.e("MainActivity", "GOOGLE_SING_IN..$GOOGLE_SING_IN")
+        if(requestCode==GOOGLE_SING_IN){
             val task : Task<GoogleSignInAccount> = GoogleSignIn
                 .getSignedInAccountFromIntent(data)
             try {
                 val account : GoogleSignInAccount = task.getResult(ApiException::class.java)
+                Log.e("MainActivity","account")
                 if(account != null){
                     val credential : AuthCredential=GoogleAuthProvider
                         .getCredential(account.idToken,null)
+                    Log.e("MainActivity","account != null")
                     FirebaseAuth.getInstance().signInWithCredential(credential)
                         .addOnCompleteListener {
                             if(it.isSuccessful){
+                                Log.e("MainActivity","isSuccessful")
                                 showHome(account.email ?:"",ProviderType.GOOGLE)
                             }else{
+                                Log.e("MainActivity","showAlert")
                                 showAlert()
                             }
                         }
                 }
             }catch (e: ApiException){
+                Log.e("MainActivity","ApiException")
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("Error")
                 builder.setMessage(e.toString())
