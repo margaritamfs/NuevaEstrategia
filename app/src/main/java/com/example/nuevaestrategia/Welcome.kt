@@ -12,8 +12,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 
 enum class ProviderType{
-    BASIC
-
+    BASIC,
+    GOOGLE
 }
 
 class Welcome : AppCompatActivity() {

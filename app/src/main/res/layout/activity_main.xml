@@ -29,9 +29,9 @@
         android:paddingTop="10dp">
 
         <ImageView
+            android:layout_width="312dp"
+            android:layout_height="136dp"
             android:paddingTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:src="@drawable/logostrategie" />
 
     </LinearLayout>
@@ -143,6 +143,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/boton_redondo"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"/>
 
 
 
