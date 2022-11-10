@@ -57,5 +57,6 @@
     <string name="cerrarsesion">Close Session</string>
 
     <string name="prefs_file">com.example.nuevaestrategia.PREFERENCE_FILE_KEY</string>
+    <string name="editartarea">Edit</string>
 
 </resources>

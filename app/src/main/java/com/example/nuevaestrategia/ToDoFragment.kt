@@ -28,6 +28,8 @@ class ToDoFragment : Fragment() {
     var myTaskTitles : ArrayList<String> = ArrayList()
     var myTaskTimes : ArrayList<String> = ArrayList()
     var myTaskPlaces : ArrayList<String> = ArrayList()
+    var myTaskIds :ArrayList<String> = ArrayList()
+
     var info: Bundle = Bundle()
 
     private lateinit var todoViewModel: ToDoViewModel
@@ -60,6 +62,7 @@ class ToDoFragment : Fragment() {
         info.putStringArrayList("titles",myTaskTitles)
         info.putStringArrayList("times",myTaskTimes)
         info.putStringArrayList("places",myTaskPlaces)
+        info.putStringArrayList("ids",myTaskIds)
 
         listRecyclerView = requireView().findViewById(R.id.recyclerToDoList)
         myAdapter = MyTaskListAdapter(activity as AppCompatActivity,info)
@@ -92,11 +95,13 @@ class ToDoFragment : Fragment() {
                 myTaskTitles.clear()
                 myTaskTimes.clear()
                 myTaskPlaces.clear()
+                myTaskIds.clear()
 
                 while (i < theTasks!!.size){
-                    myTaskTitles.add(theTasks[i].title)
-                    myTaskTimes.add(theTasks[i].time)
-                    myTaskPlaces.add(theTasks[i].place)
+                    myTaskTitles.add(theTasks[i].title.toString())
+                    myTaskTimes.add(theTasks[i].time.toString())
+                    myTaskPlaces.add(theTasks[i].place.toString())
+                    myTaskIds.add(result[i].id.toString())
                     i++
                 }
                 myAdapter.notifyDataSetChanged()
