@@ -101,7 +101,7 @@ class ToDoFragment : Fragment() {
                     myTaskTitles.add(theTasks[i].title.toString())
                     myTaskTimes.add(theTasks[i].time.toString())
                     myTaskPlaces.add(theTasks[i].place.toString())
-                    myTaskIds.add(result[i].id.toString())
+                    myTaskIds.add(theTasks[i].id.toString())
                     i++
                 }
                 myAdapter.notifyDataSetChanged()
