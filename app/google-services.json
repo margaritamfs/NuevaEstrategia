@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "842250922449",
-    "project_id": "miporyectico",
-    "storage_bucket": "miporyectico.appspot.com"
+    "project_number": "948861482781",
+    "project_id": "estrategie-65a6f",
+    "storage_bucket": "estrategie-65a6f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:842250922449:android:d261fe8d67bfca68d618f0",
+        "mobilesdk_app_id": "1:948861482781:android:69de29cead5d25d96813f4",
         "android_client_info": {
           "package_name": "com.example.nuevaestrategia"
         }
       },
       "oauth_client": [
         {
-          "client_id": "842250922449-1i2vp2eaid1j8la2njbjgmdllumjgmgs.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.nuevaestrategia",
-            "certificate_hash": "31b5f4a89e775bdd0c792073709303f97ce5d48d"
-          }
-        },
-        {
-          "client_id": "842250922449-h5d3hi2t9cgboresl4ffu1jsml1t1g94.apps.googleusercontent.com",
+          "client_id": "948861482781-hea3lhhvcrf1ni0it8j9614bbha8bq8r.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBo8ZSoYL8ZtCx0RpaCdxLG7cbGTEL2k6U"
+          "current_key": "AIzaSyAnIyRD1yt2W4RBmMWHZ1YEvNnYzVbx8iY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "842250922449-h5d3hi2t9cgboresl4ffu1jsml1t1g94.apps.googleusercontent.com",
+              "client_id": "948861482781-hea3lhhvcrf1ni0it8j9614bbha8bq8r.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

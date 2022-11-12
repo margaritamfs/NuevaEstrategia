@@ -43,8 +43,8 @@ class NewTaskActivity : AppCompatActivity() {
     fun onSaveTask(view: View) {
 
         var db = ToDoDataBase.getDatabase(this)
-        val dbFirebase = FirebaseFirestore.getInstance()
 
+        val dbFirebase = FirebaseFirestore.getInstance()
         val todoDAO= db.todoDao()
 
         var title: String = editTextTitle.text.toString()
@@ -59,8 +59,8 @@ class NewTaskActivity : AppCompatActivity() {
                 if (id.equals("0")){
                 var result = todoDAO.insertTask(task)
                 if(result!=-1L) {
-                    dbFirebase.collection("ToDo").document(result.toString()).set(
-                        hashMapOf("title" to title, "time" to time, "place" to place)
+                    dbFirebase.collection("ToDo").document(result.toString())
+                        .set(hashMapOf("title" to title, "time" to time, "place" to place)
                     )
 
                     setResult(Activity.RESULT_OK)
