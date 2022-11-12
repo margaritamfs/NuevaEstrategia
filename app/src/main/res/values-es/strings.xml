@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">ESTRATEGIE</string>
+    <string name="text_username">Usuario</string>
+    <string name="usuariomail">Email</string>
+    <string name="text_password">Clave</string>
+    <string name="ingreso_password">Entre su clave</string>
+    <string name="txt_botoningreso">Entrar</string>
+    <string name="txt_botonregistro">Registrate</string>
+
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_apellido">Apellido</string>
+    <string name="txt_nitcedula">No. cédula</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_telefono">No. Celular</string>
+    <string name="txt_clave">Clave</string>
+    <string name="txt_claverepetir">Repetir clave</string>
+    <string name="txt_politicas">Poliicas de privacidad</string>
+
+    <string name="txt_nombrecompleto">Nombres</string>
+    <string name="txt_apellidocompleto">Apellidos</string>
+
+    <string name="txt_botonenviar">Enviar</string>
+
+    <string name="txt_nombrebienvenida">Bienvenido</string>
+    <string name="txt_informacion1">Seleccione de la siguiente lista a la cual quiere aplicar</string>
+    <string name="txt_trabajo1">Venta de boletería</string>
+    <string name="txt_atencioncliente">Atención al cliente</string>
+    <string name="txt_callcenter">Call Center</string>
+    <string name="txt_organizacionespacio">Organizacion del espacio</string>
+
+    <string name="txt_welcome">BIENVENIDO</string>
+    <string name="txt_welcomeinvalido">SU CLAVE ES INVALIDA</string>
+
+    <string name="txt_titulobusqueda">Buscar</string>
+    <string name="txt_preferencias">Preferencias</string>
+    <string name="txt_salir">Salir</string>
+
+    <string name="txt_botonflotante">Adicionar elementos</string>
+    <string name="trabajo1Detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida felis eu venenatis efficitur. Duis a euismod erat. Mauris hendrerit tortor tellus, nec malesuada orci laoreet eget</string>
+
+    <string name="errorpassword">Su clave es invalida</string>
+    <string name="errorusuario">Digite su nombre correctamente</string>
+    <string name="mensajeerror">TU ESTAS EQUIVOCADO!!</string>
+    <string name="mensajebienvenida">BIENVENIDO WEY!!</string>
+    <string name="nombreusuario">"Nombre: "</string>
+    <string name="mensajebtnflotante">Este es un mensaje del botón flotante</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola fragmento en blanco!!</string>
+    <string name="lugar">Lugar: </string>
+    <string name="hora">Hora: </string>
+    <string name="descripciontarea">Tarea:</string>
+    <string name="txt_nombredesarrollador">Margarita Forero La Mejor</string>
+    <string name="txt_botonregistroemail">Registro con email</string>
+    <string name="bienvenidousuario">BIENVENIDO</string>
+    <string name="txt_loginemail">INGRESE CON SU EMAIL</string>
+    <string name="cerrarsesion">CERRAR SESIóN</string>
+
+    <string name="prefs_file">com.example.nuevaestrategia.PREFERENCE_FILE_KEY</string>
+    <string name="editartarea">EDITAR</string>
+
+</resources>

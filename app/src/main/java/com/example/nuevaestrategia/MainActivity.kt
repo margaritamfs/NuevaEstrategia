@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -32,8 +33,10 @@ class MainActivity : AppCompatActivity() {
     private var txtLogin : EditText?=null
     private var authLayout : LinearLayout?=null
     private var btnGoogle : SignInButton? = null
+    private var textviewpdw: TextView?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.miMenu))
@@ -41,9 +44,14 @@ class MainActivity : AppCompatActivity() {
         txtLogin=findViewById(R.id.txtLogin)
         authLayout=findViewById(R.id.authLayout)
         btnGoogle = findViewById(R.id.btnGoogle)
+        textviewpdw= findViewById(R.id.textviewforgetpwd)
         session()
-
         loginGoogle()
+        textviewpdw!!.setOnClickListener{
+            val intent= Intent(this, ForgetPasswordActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 
@@ -230,4 +238,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
 }

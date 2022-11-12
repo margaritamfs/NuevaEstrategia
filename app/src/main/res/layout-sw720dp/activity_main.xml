@@ -144,16 +144,6 @@
             app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/boton_redondo"/>
 
-        <TextView
-            android:id="@+id/textviewforgetpwd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="forget pwd"
-            android:layout_margin="10dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"/>
-        
-
         <com.google.android.gms.common.SignInButton
             android:id="@+id/btnGoogle"
             android:layout_width="match_parent"

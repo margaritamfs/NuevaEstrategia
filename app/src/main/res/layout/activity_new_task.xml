@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".NewTaskActivity"
-    android:background="@color/text_error">
+    android:background="@color/purple_200">
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextID2"
