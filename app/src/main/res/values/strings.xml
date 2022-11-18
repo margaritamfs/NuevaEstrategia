@@ -60,5 +60,6 @@
     <string name="editartarea">Edit</string>
     <string name="olvidopassword">Forget Password</string>
     <string name="olvidopassword1">Forget your email</string>
+    <string name="deletetarea">Delete</string>
 
 </resources>

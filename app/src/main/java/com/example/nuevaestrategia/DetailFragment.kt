@@ -1,5 +1,6 @@
 package com.example.nuevaestrategia
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import com.example.nuevaestrategia.room_database.ToDo
+import com.example.nuevaestrategia.room_database.ToDoDataBase
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class DetailFragment : Fragment(){
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +53,47 @@ class DetailFragment : Fragment(){
             principal.putExtra("lugar",tarea3.text as String)
             principal.putExtra("id",tvID.text as String)
             startActivity(principal)
+        }
+
+        val btnDelete: Button= fragmento.findViewById(R.id.btnDeletefd)
+        btnDelete.setOnClickListener{
+            val db = ToDoDataBase.getDatabase(requireActivity())
+            val todoDAO= db.todoDao()
+            val dbFirebase = FirebaseFirestore.getInstance()
+            val task = ToDo(id!!.toInt(),tarea!!.toString(),hora!!.toString(),lugar!!.toString())
+            val negativeButton={_: DialogInterface, _:Int->}
+            val mensajepositivo={ dialog: DialogInterface, which:Int->
+                runBlocking {
+                    launch {
+                        todoDAO.deleteTask(task)
+                        dbFirebase.collection("ToDo").document(id).delete()
+
+                    }
+                }
+
+                val principal = Intent(requireActivity(), ToDoActivity::class.java)
+                startActivity(principal)
+            }
+
+            val dialog= AlertDialog.Builder(requireActivity())
+                .setTitle("Delete Task")
+                .setMessage("Está seguro de eliminar la tarea?")
+                .setPositiveButton("ok",mensajepositivo)
+                .setNegativeButton("Cancelar",negativeButton)
+                .create()
+                .show()
+
+            runBlocking {
+                launch {
+                    todoDAO.deleteTask(task)
+                    dbFirebase.collection("ToDo").document(id).delete()
+
+                }
+            }
+
+            val principal = Intent(requireActivity(), ToDoActivity::class.java)
+            startActivity(principal)
+
         }
 
         return fragmento

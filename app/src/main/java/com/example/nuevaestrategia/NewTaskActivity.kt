@@ -42,10 +42,9 @@ class NewTaskActivity : AppCompatActivity() {
 
     fun onSaveTask(view: View) {
 
-        var db = ToDoDataBase.getDatabase(this)
-
-        val dbFirebase = FirebaseFirestore.getInstance()
+        val db = ToDoDataBase.getDatabase(this)
         val todoDAO= db.todoDao()
+        val dbFirebase = FirebaseFirestore.getInstance()
 
         var title: String = editTextTitle.text.toString()
         var time: String = editTextTime.text.toString()

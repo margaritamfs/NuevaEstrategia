@@ -62,14 +62,16 @@ class MainActivity : AppCompatActivity() {
         if(usuario=="margaritamfs.forero@gmail.com") {
             if(txtLogin!!.text.toString()=="12345")
                 {
+                val negativeButton={_: DialogInterface, _:Int->}
                 val mensajepositivo={dialog:DialogInterface,which:Int->
-                    val abrirventanawelcome = Intent(this,Welcome::class.java)
+                val abrirventanawelcome = Intent(this,Welcome::class.java)
                     startActivity(abrirventanawelcome)
                 }
 
                     val dialog=AlertDialog.Builder(this)
                         .setTitle(getString(R.string.mensajebienvenida))
                         .setMessage(getString(R.string.nombreusuario)+usuario)
+                        .setNegativeButton("Cancelar",negativeButton)
                         .setPositiveButton("ok",mensajepositivo)
                         .create()
                         .show()
