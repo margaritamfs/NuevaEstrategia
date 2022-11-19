@@ -61,5 +61,10 @@
     <string name="olvidopassword">OLVIDO SU CLAVE</string>
     <string name="olvidopassword1">OLVIDO SU EMAIL</string>
     <string name="deletetarea">Borrar Tarea</string>
+    <string name="listproduc">Ver lista de productos</string>
+    <string name="text_nombreproducto">Nombre Producto</string>
+    <string name="text_precioproducto">Precio del producto</string>
+    <string name="text_descripcionproducto">Descripcion del producto</string>
+
 
 </resources>

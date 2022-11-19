@@ -21,12 +21,15 @@ class Welcome : AppCompatActivity() {
     private var textemail: TextView?=null
     private var textprovedor: TextView?=null
     private var btnLogOut: Button?=null
+    private var btnProductoAW: Button?=null
     @SuppressLint("SuspiciousIndentation")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
         textemail=findViewById(R.id.textemail)
         textprovedor=findViewById(R.id.textprovedor)
+        btnProductoAW=findViewById(R.id.btnProductoAW)
         val bundle=intent.extras
         val email=bundle?.getString("email")
         val provide=bundle?.getString("provider")
@@ -45,6 +48,11 @@ class Welcome : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut()
            // onBackPressed()
             val intent= Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnProductoAW!!.setOnClickListener{
+            val intent= Intent(this, ListaProductoActivity::class.java)
             startActivity(intent)
         }
 

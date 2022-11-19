@@ -61,5 +61,9 @@
     <string name="olvidopassword">Forget Password</string>
     <string name="olvidopassword1">Forget your email</string>
     <string name="deletetarea">Delete</string>
+    <string name="listproduc">Products List</string>
+    <string name="text_nombreproducto">Product name</string>
+    <string name="text_precioproducto">Value</string>
+    <string name="text_descripcionproducto">Description</string>
 
 </resources>
