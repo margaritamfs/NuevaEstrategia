@@ -17,7 +17,8 @@ ArrayAdapter<Producto>(mContext, 0, listaProductos){
         layout.textViewNombreIP.text = producto.nombre
         layout.textViewPrecioIP.text = "$${producto.precio}"
         layout.imageViewProductoIP.setImageResource(producto.imagen)
-        layout.textViewDescripcionIP.text = producto.descripcion
+
+
         return layout
     }
 
