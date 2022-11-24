@@ -7,12 +7,13 @@
         android:id="@+id/edit_item"
         android:icon="@drawable/ic_baseline_edit_24"
         android:title="Item"
-        app:showAsAction="always"/>
-
+        app:showAsAction="always"
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/delete_item"
         android:icon="@drawable/ic_baseline_delete_24"
         android:title="Item"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        android:iconTint="@color/white"/>
 
 </menu>
