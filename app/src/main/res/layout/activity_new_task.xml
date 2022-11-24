@@ -7,13 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".NewTaskActivity"
-    android:background="@color/purple_200">
+    android:background="@color/background"
+    android:layout_margin="30dp">
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextID2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="title"
+        android:hint="Title"
         android:text="0"
         android:visibility="gone"/>
 
@@ -21,25 +22,40 @@
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="title"/>
+        android:hint="Title"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColorHint="@color/white"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="time"/>
+        android:hint="Time"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextPlace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="place"/>
+        android:hint="Place"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
 
     <Button
         android:id="@+id/btnSavetask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onSaveTask"
-        android:text="Save"/>
+        android:text="Save"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
 
 </LinearLayout>

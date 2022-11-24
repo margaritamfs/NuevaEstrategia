@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:gravity="center_vertical"
     android:background="?attr/selectableItemBackground"
-    android:layout_height="?attr/listPreferredItemHeightLarge" >
+    android:layout_height="?attr/listPreferredItemHeightLarge"
+    >
 
 
 
-    
     <ImageView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:src="@drawable/carritocompras"/>
+        android:src="@drawable/carritocompras"
+        android:background="@color/white"/>
     
     <LinearLayout
         android:layout_width="0dp"
@@ -28,16 +29,18 @@
             android:id="@+id/textViewTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Task tittle"
+            android:text="@string/tasktittle"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
         
         <TextView
             android:id="@+id/textViewTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time"
-            android:textSize="20sp"/>
+            android:text="@string/time"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
 
     </LinearLayout>   
 

@@ -34,7 +34,7 @@ class ToDoActivity : AppCompatActivity() {
         val navView: NavigationView= findViewById(R.id.nav_view)
         val navHostFragment= supportFragmentManager.findFragmentById(R.id.fragmentosToDo)as NavHostFragment
         val navController= navHostFragment.navController
-        appBarConfiguration= AppBarConfiguration(setOf(R.id.nav_todo,R.id.nav_about),drawerLayout)
+        appBarConfiguration= AppBarConfiguration(setOf(R.id.nav_todo,R.id.nav_about,R.id.nav_Welcome,R.id.nav_ProductosRR),drawerLayout)
         setupActionBarWithNavController(navController,appBarConfiguration)
         navView.setupWithNavController(navController)
     }

@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="16dp"
+    android:layout_margin="20dp"
     tools:context="ToDoFragment"
-    android:background="@color/text_color23">
+    android:background="@color/background">
 
     <!--
 

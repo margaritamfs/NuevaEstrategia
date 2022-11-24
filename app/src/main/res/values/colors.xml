@@ -6,11 +6,11 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#B9C6E7</color>
     <color name="teal_700">#787DE1</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#302E2E</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="background">#1d3559</color>
-    <color name="btn_gral">#171717</color>
+    <color name="btn_gral">#2E2D2D</color>
     <color name="txt_gral">#ffffff</color>
     <color name="text_error">#e6332a</color>
     <color name="text_seleccionado">#fcc024</color>

@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">ESTRATEGIE</string>
-    <string name="text_username">Username</string>
+    <string name="text_username">Email</string>
     <string name="usuariomail">Email</string>
     <string name="text_password">Password</string>
     <string name="ingreso_password">Enter your password</string>
     <string name="txt_botoningreso">Login</string>
-    <string name="txt_botonregistro">Check in</string>
+    <string name="txt_botonregistro">Register</string>
 
     <string name="txt_nombre">Name</string>
     <string name="txt_apellido">Surname</string>
@@ -21,7 +21,7 @@
 
     <string name="txt_botonenviar">Send</string>
 
-    <string name="txt_nombrebienvenida">Welcome XXX</string>
+    <string name="txt_nombrebienvenida">Welcome</string>
     <string name="txt_informacion1">Select from the following list of jobs which you want to apply for</string>
     <string name="txt_trabajo1">Ticket sales</string>
     <string name="txt_atencioncliente">Customer Support</string>
@@ -47,11 +47,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="lugar">Lugar: </string>
-    <string name="hora">Hora: </string>
-    <string name="descripciontarea">Tarea:</string>
-    <string name="txt_nombredesarrollador">Margarita Forero La Mejor</string>
-    <string name="txt_botonregistroemail">Registro con email</string>
+    <string name="lugar">Place: </string>
+    <string name="hora">Time: </string>
+    <string name="descripciontarea">Description:</string>
+    <string name="txt_nombredesarrollador">Margarita Forero THE BEST</string>
+    <string name="txt_botonregistroemail">REGISTRATION WITH YOUR EMAIL</string>
     <string name="bienvenidousuario">WELCOME</string>
     <string name="txt_loginemail">Login email</string>
     <string name="cerrarsesion">Close Session</string>
@@ -62,8 +62,15 @@
     <string name="olvidopassword1">Forget your email</string>
     <string name="deletetarea">Delete</string>
     <string name="listproduc">Products List</string>
-    <string name="text_nombreproducto">Product name</string>
-    <string name="text_precioproducto">Value</string>
-    <string name="text_descripcionproducto">Description</string>
+    <string name="text_nombreproducto">Product name:</string>
+    <string name="text_precioproducto">Value:</string>
+    <string name="text_descripcionproducto">Description:</string>
+    <string name="or">or</string>
+    <string name="tasktittle">Task Title:</string>
+    <string name="time">Time:</string>
+    <string name="todo">To DO</string>
+    <string name="about">About</string>
+    <string name="bienvenidoo">Welcome</string>
+    <string name="productos">Products</string>
 
 </resources>

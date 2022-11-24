@@ -62,9 +62,19 @@
     <string name="olvidopassword1">OLVIDO SU EMAIL</string>
     <string name="deletetarea">Borrar Tarea</string>
     <string name="listproduc">Ver lista de productos</string>
-    <string name="text_nombreproducto">Nombre Producto</string>
-    <string name="text_precioproducto">Precio del producto</string>
-    <string name="text_descripcionproducto">Descripcion del producto</string>
+    <string name="text_nombreproducto">Nombre Producto:</string>
+    <string name="text_precioproducto">Precio del producto:</string>
+    <string name="text_descripcionproducto">Descripción del producto:</string>
+
+    <string name="tasktittle">Título de la tarea:</string>
+    <string name="time">Hora:</string>
+
+    <string name="todo">Tareas por hacer</string>
+    <string name="about">Acerca de</string>
+    <string name="bienvenidoo">Bienvenido</string>
+    <string name="productos">Productos</string>
+
+    <string name="or">ó</string>
 
 
 </resources>

@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NuevoProductoActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background">
 
         <EditText
             android:id="@+id/editTextNombreNPA"
@@ -14,7 +15,13 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Nombre"/>
+            android:hint="Nombre"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"/>
 
     <EditText
         android:id="@+id/editTextPrecioNPA"
@@ -22,7 +29,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:hint="Precio"/>
+        android:hint="Precio"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
 
     <EditText
         android:id="@+id/editTextDetalleNPA"
@@ -30,7 +42,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:hint="Detalle"/>
+        android:hint="Detalle"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
 
     <ImageView
         android:id="@+id/imageSelectNPA"
@@ -44,6 +61,7 @@
         android:id="@+id/buttonNPA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar"/>
+        android:text="Guardar"
+        android:layout_margin="20dp"/>
 
 </LinearLayout>
