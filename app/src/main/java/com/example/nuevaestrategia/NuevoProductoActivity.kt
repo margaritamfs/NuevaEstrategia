@@ -1,8 +1,11 @@
 package com.example.nuevaestrategia
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.nuevaestrategia.room_database.AdminProducto.ImagenController
 import com.example.nuevaestrategia.room_database.AdminProducto.Producto
 import com.example.nuevaestrategia.room_database.AdminProducto.ProductoDatabase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -12,6 +15,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class NuevoProductoActivity : AppCompatActivity() {
+    private val SELECT_ACTIVITY=50
+    private var imageUri : Uri?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nuevo_producto)
@@ -65,5 +71,21 @@ class NuevoProductoActivity : AppCompatActivity() {
               startActivity(principal)
           }
         }
+
+        imageSelectNPA.setOnClickListener {
+            ImagenController.selectPhoneFromGallery(this, SELECT_ACTIVITY)
+        }
+
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when{
+            requestCode==SELECT_ACTIVITY && resultCode==Activity.RESULT_OK->{
+                imageUri = data!!.data
+                imageSelectNPA.setImageURI(imageUri)
+            }
+        }
+    }
+
 }
