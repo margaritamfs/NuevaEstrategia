@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.example.nuevaestrategia.room_database.AdminProducto.ImagenController
 import com.example.nuevaestrategia.room_database.AdminProducto.Producto
 import com.example.nuevaestrategia.room_database.AdminProducto.ProductoDatabase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -18,10 +19,12 @@ class ProductoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_producto)
         val producto = intent.getSerializableExtra("producto") as Producto
+        val imageUri=ImagenController.getImagenUri(this,producto.idProducto.toLong())
+        imageViewPA.setImageURI(imageUri)
         textViewNombreAP.text= producto.nombre
         textViewPrecioAP.text= "$${producto.precio}"
         textViewDescripcionAP.text= producto.descripcion
-        imageViewPA.setImageResource(producto.imagen)
+       // imageViewPA.setImageResource(producto.imagen)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -10,6 +10,7 @@ import com.example.nuevaestrategia.room_database.AdminProducto.Producto
 import com.example.nuevaestrategia.room_database.AdminProducto.ProductoDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_nuevo_producto.*
+import kotlinx.android.synthetic.main.activity_producto.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -28,6 +29,10 @@ class NuevoProductoActivity : AppCompatActivity() {
             editTextPrecioNPA.setText(producto.precio.toString())
             editTextDetalleNPA.setText(producto.descripcion)
             idProducto= producto.idProducto
+
+            val imageUri=ImagenController.getImagenUri(this,producto.idProducto.toLong())
+            imageSelectNPA.setImageURI(imageUri)
+
         }
 
         val database = ProductoDatabase.getDatabase(this)
@@ -42,6 +47,9 @@ class NuevoProductoActivity : AppCompatActivity() {
 
               CoroutineScope(Dispatchers.IO).launch {
                   var result = database.productos().insert(producto)
+                  imageUri?.let{
+                      ImagenController.saveImagen(this@NuevoProductoActivity,result,it)
+                  }
 
                   dbFirebase.collection("Productos").document(result.toString())
                       .set(
@@ -56,6 +64,9 @@ class NuevoProductoActivity : AppCompatActivity() {
           }else {
               CoroutineScope(Dispatchers.IO).launch {
                   database.productos().update(producto)
+                  imageUri?.let{
+                      ImagenController.saveImagen(this@NuevoProductoActivity,idProducto.toLong(),it)
+                  }
 
                   dbFirebase.collection("Productos").document(idProducto.toString())
                       .set(
